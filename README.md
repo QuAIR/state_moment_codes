@@ -4,7 +4,7 @@ The experimental codes and programs for the **Near-optimal simultaneous estimati
 
 ## Overview
 
-This is a Github repository for the academic research of "Near-Optimal Simultaneous Estimation of Quantum State Moments." This work introduces a framework for the resource-efficient simultaneous estimation of quantum state moments via qubit reuse. The method addresses the challenges of high resource requirements in existing approaches, offering a scalable route to quantum system characterization and spectroscopy on near-term quantum hardware.
+This is a Github repository for the academic research of "Near-Optimal Simultaneous Estimation of Quantum State Moments." This work introduces a framework for the resource-efficient simultaneous estimation of quantum state moments via qubit reuse.
 
 ## Context
 
