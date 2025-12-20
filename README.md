@@ -6,15 +6,6 @@ The experimental codes and programs for the **Near-optimal simultaneous estimati
 
 This is a Github repository for the academic research of "Near-Optimal Simultaneous Estimation of Quantum State Moments." This work introduces a framework for the resource-efficient simultaneous estimation of quantum state moments via qubit reuse.
 
-## Context
-
-Estimating nonlinear properties, such as Rényi entropies and observable-weighted moments, is a central strategy for spectrum spectroscopy. This is fundamental for:
-*   Property prediction and analysis in quantum information science.
-*   Statistical mechanics.
-*   Many-body physics.
-
-However, current methods are often susceptible to noise and demand significant computational resources, making them difficult to implement on near-term quantum hardware. This project aims to solve these limitations by leveraging qubit reset operations to minimize physical qubit requirements while maintaining high estimation accuracy.
-
 ## Key Findings
 
 *   **Resource Efficiency:** For an $m$-qubit quantum state $\rho$, the core circuit requires only $2m+1$ physical qubits and $\mathcal{O}(k)$ CSWAP gates to estimate moments up to the $k$-th order.
