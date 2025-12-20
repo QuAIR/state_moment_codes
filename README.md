@@ -1,4 +1,4 @@
-# state_moment
+# state_moment_codes
 
 The experimental codes and programs for the **Near-optimal simultaneous estimation of quantum state moments** project.
 
