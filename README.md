@@ -1,23 +1,39 @@
-# state_moment_codes
+# Qubit-Efficient Simultaneous Estimation of Nonlinear Quantum Properties
 
-The experimental codes and programs for the **Near-optimal simultaneous estimation of quantum state moments** project.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![arXiv](https://img.shields.io/badge/arXiv-2603.XXXXX-b31b1b.svg)](https://arxiv.org/abs/2603.XXXXX) This repository contains the official implementation and numerical simulation code for the paper **"Qubit-Efficient Simultaneous Estimation of Nonlinear Quantum Properties"** by Xiao Shi, Jiyu Jiang, Xian Wu, Jingu Xie, Hongshun Yao, and Xin Wang. 
 
-## Overview
+## 📖 Overview
 
-This is a Github repository for the academic research of "Near-Optimal Simultaneous Estimation of Quantum State Moments." This work introduces a framework for the resource-efficient simultaneous estimation of quantum state moments via qubit reuse.
+Estimating nonlinear properties of quantum states (such as moments $\operatorname{Tr}(O\rho^k)$ and Rényi entropies) is a central task in quantum information and many-body physics. However, traditional methods require either massive spatial overhead ($\mathcal{O}(kn)$ qubits) or exponentially scaling sample complexity. 
 
-## Key Findings
+In this work, we propose a **unified, hardware-efficient circuit architecture** capable of extracting the entire sequence of nonlinear properties simultaneously. 
 
-*   **Resource Efficiency:** For an $m$-qubit quantum state $\rho$, the core circuit requires only $2m+1$ physical qubits and $\mathcal{O}(k)$ CSWAP gates to estimate moments up to the $k$-th order.
-*   **Simultaneous Estimation:** The method achieves simultaneous estimation of the full hierarchy of moments $\text{Tr}(\rho^2), \dots, \text{Tr}(\rho^k)$, as well as arbitrary polynomial functionals and their observable-weighted counterparts.
-*   **Near-Optimal Complexity:** The protocol achieves a near-optimal sample complexity of $\mathcal{O}(k \log k / \varepsilon^2)$.
-*   **Applications:**
-    *   The estimated moments yield tight bounds on a state's maximum eigenvalue.
-    *   The protocol is applied in quantum virtual cooling to access low-energy states of the Heisenberg model.
-*   **Experimental Validation:** The viability of the protocol was demonstrated on near-term quantum hardware by experimentally measuring higher-order Rényi entropy on a superconducting quantum processor.
+### Key Features
+- **Drastic Resource Reduction**: Reduces the qubit requirement from $\mathcal{O}(kn)$ to $\mathcal{O}(n)$ using sequential state injection and mid-circuit measurements/resets.
+- **Near-Optimal Sample Complexity**: Achieves a sample complexity of $\mathcal{O}(k \log k \, C_O^2 / \epsilon^2)$, offering a rigorous quadratic improvement in the maximum degree $k$ compared to prior sequential methods.
+- **Broad Practical Utility**: Supports simultaneous estimation of multiple polynomial functionals and bivariate state overlaps $\operatorname{Tr}[O(\rho\sigma)^j]$.
 
-## Paper
+## ⚙️ Repository Structure
 
-**Title:** Near-Optimal Simultaneous Estimation of Quantum State Moments  
-**Authors:** Xiao Shi, Jiyu Jiang, Xian Wu, Jingu Xie, Hongshun Yao, Xin Wang  
-**arXiv version:** [https://arxiv.org/abs/2509.24842](https://arxiv.org/abs/2509.24842)
+The codebase is organized simply and effectively, with all core simulation scripts contained within the `Application` directory:
+
+```text
+.
+├── Application/
+│   ├── QVC.py                  # Quantum Virtual Cooling (QVC) simulations
+│   ├── bivariate_verify.py     # Verification of bivariate state overlaps Tr[O(ρσ)^j]
+│   ├── max_eigenvalue.py       # Estimation of maximum eigenvalue bounds
+│   └── verify.py               # Core verification of the simultaneous estimation protocol
+└── README.md
+
+🚀 Installation
+We recommend using a virtual environment (e.g., Conda) to run the simulations.
+
+git clone [https://github.com/QUAIR/state_moment_codes.git](https://github.com/QUAIR/state_moment_codes.git)
+cd state_moment_codes
+conda create -n quantum_moments python=3.10
+conda activate quantum_moments
+# Install required packages (e.g., pennylane, numpy, scipy, matplotlib)
+pip install pennylane numpy scipy matplotlib
+
