@@ -1,7 +1,7 @@
 # Qubit-Efficient Simultaneous Estimation of Nonlinear Quantum Properties
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![arXiv](https://img.shields.io/badge/arXiv-2603.XXXXX-b31b1b.svg)](https://arxiv.org/abs/2509.24842) This repository contains the official implementation and numerical simulation code for the paper **"Qubit-Efficient Simultaneous Estimation of Nonlinear Quantum Properties"** by Xiao Shi, Jiyu Jiang, Xian Wu, Jingu Xie, Hongshun Yao, and Xin Wang. 
+[![arXiv](https://img.shields.io/badge/arXiv-2509.24842-b31b1b.svg)](https://arxiv.org/abs/2509.24842) This repository contains the official implementation and numerical simulation code for the paper **"Qubit-Efficient Simultaneous Estimation of Nonlinear Quantum Properties"** by Xiao Shi, Jiyu Jiang, Xian Wu, Jingu Xie, Hongshun Yao, and Xin Wang. 
 
 ## 📖 Overview
 
@@ -11,7 +11,7 @@ In this work, we propose a **unified, hardware-efficient circuit architecture** 
 
 ### Key Features
 - **Drastic Resource Reduction**: Reduces the qubit requirement from $\mathcal{O}(kn)$ to $\mathcal{O}(n)$ using sequential state injection and mid-circuit measurements/resets.
-- **Near-Optimal Sample Complexity**: Achieves a sample complexity of $\mathcal{O}(k \log k \, C_O^2 / \epsilon^2)$, offering a rigorous quadratic improvement in the maximum degree $k$ compared to prior sequential methods.
+- **Near-Optimal Sample Complexity**: Achieves a sample complexity of $\mathcal{O}(k \log k  C_O^2 / \epsilon^2)$, offering a rigorous quadratic improvement in the maximum degree $k$ compared to prior sequential methods.
 - **Broad Practical Utility**: Supports simultaneous estimation of multiple polynomial functionals and bivariate state overlaps $\mathrm{Tr}[O(\rho\sigma)^j]$.
 
 ## ⚙️ Repository Structure
