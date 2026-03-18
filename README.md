@@ -30,10 +30,7 @@ The codebase is organized simply and effectively, with all core simulation scrip
 🚀 Installation
 We recommend using a virtual environment (e.g., Conda) to run the simulations.
 
-git clone [https://github.com/QUAIR/state_moment_codes.git](https://github.com/QUAIR/state_moment_codes.git)
-cd state_moment_codes
-conda create -n quantum_moments python=3.10
-conda activate quantum_moments
+git clone [https://github.com/QUAIR/Nonlinear_Properties.git](https://github.com/QUAIR/Nonlinear_Properties.git)
 # Install required packages (e.g., pennylane, numpy, scipy, matplotlib, quairkit)
 pip install pennylane numpy scipy matplotlib quairkit
 
